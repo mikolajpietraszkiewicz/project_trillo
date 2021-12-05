@@ -1,0 +1,163 @@
+/*
+COLORS
+
+Primary: #eb2f64
+Primary light: #FF3366
+Primary dark: #BA265D
+
+Grey light 1: #faf9f9
+Grey light 2: #f4f2f2
+Grey light 3: #f0eeee
+Grey light 4: #ccc
+
+Grey dark 1: #333
+Grey dark 2: #777
+Grey dark 3: #999
+
+*/
+:root {
+  --color_primary: #eb2f64;
+  --color_primary_light: #FF3366;
+  --color_primary_dark: #BA265D;
+  --color_grey_light_1: #faf9f9;
+  --color_grey_light_2: #f4f2f2;
+  --color_grey_light_3: #f0eeee;
+  --grey_light_4: #ccc;
+  --color_grey_dark_1: #333;
+  --color_grey_dark_2: #777;
+  --color_grey_dark_3: #999;
+  --color__white:#fff;
+  --shadow__dark:0 2rem 6rem rgba(0,0,0,0.3); }
+
+* {
+  margin: 0;
+  padding: 0; }
+  *, *::before, *::after {
+    box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color_grey_dark_2);
+  background-image: linear-gradient(to right bottom, var(--color_primary_light), var(--color_primary_dark));
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
+
+.main__container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color_grey_light_2);
+  box-shadow: var(--shadow__dark);
+  min-height: 50rem; }
+
+.header {
+  height: 7rem;
+  background-color: var(--color__white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.content {
+  display: flex; }
+
+.sidebar {
+  background-color: var(--color_grey_dark_1);
+  flex: 0 0 18%; }
+
+.hotel__view {
+  background-color: orangered;
+  flex: 1; }
+
+.header__logo {
+  height: 3.25rem;
+  margin-left: 2rem; }
+
+.header__search {
+  font-size: 1.4rem;
+  flex: 0 0 40%;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .header__search__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color_grey_light_2);
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    margin-right: -2.5rem;
+    transition: all .3s; }
+    .header__search__input::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color_grey_light_4); }
+    .header__search__input:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color_grey_light_3); }
+  .header__search__input:focus + .header__search__button {
+    background-color: var(--color_grey_light_3); }
+  .header__search__button {
+    border: none;
+    background-color: var(--color_grey_light_2);
+    transition: all .3s; }
+    .header__search__button:focus {
+      outline: none; }
+    .header__search__button:active {
+      transform: translateY(2px); }
+    .header__search__button__icon {
+      height: 2rem;
+      width: 2rem;
+      fill: var(--color_grey_dark_3); }
+
+.header__user__nav {
+  align-self: stretch;
+  display: flex;
+  align-items: center; }
+  .header__user__nav > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .header__user__nav > *:hover {
+    background-color: var(--color_grey_light_2); }
+  .header__user__nav__icon__box {
+    position: relative; }
+    .header__user__nav__icon__box__icon {
+      height: 2.25rem;
+      width: 2.25rem;
+      fill: var(--color_grey_dark_2); }
+    .header__user__nav__icon__box__notification {
+      font-size: .8rem;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 500px;
+      color: var(--color__white);
+      background-color: var(--color_primary);
+      position: absolute;
+      top: 1.5rem;
+      right: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .header__user__nav__user {
+    display: flex;
+    justify-content: space-between; }
+    .header__user__nav__user__photo {
+      height: 3.75rem;
+      width: 3.75rem;
+      border-radius: 50%;
+      margin-left: 1rem; }
+    .header__user__nav__user__name {
+      margin-left: .6rem;
+      font-size: 1.4rem; }
