@@ -13,6 +13,8 @@
   height: 7rem;
   background-color: var(--color__white);
 
+  border-bottom: 2px solid var(--color_grey_light_2);
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -35,9 +37,8 @@ flex: 0 0 18%;
 
 .hotel__view{
   //background-color: var(--color__white);
-  background-color: orangered;
+  //background-color: orangered;
   flex:1;
 
-  //TODO: remove later
-  height: 80rem;
 }
+
